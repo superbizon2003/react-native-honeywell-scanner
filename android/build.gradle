@@ -119,13 +119,14 @@ afterEvaluate { project ->
         include '**/*.java'
     }
 
-    task androidJavadocJar(type: Jar, dependsOn: androidJavadoc) {
-        classifier = 'javadoc'
+    tasks.register('androidJavadocJar', Jar) {
+        dependsOn androidJavadoc
+        archiveClassifier.set('javadoc')
         from androidJavadoc.destinationDir
     }
 
-    task androidSourcesJar(type: Jar) {
-        classifier = 'sources'
+    tasks.register('androidSourcesJar', Jar) {
+        archiveClassifier.set('sources')
         from android.sourceSets.main.java.srcDirs
         include '**/*.java'
     }
