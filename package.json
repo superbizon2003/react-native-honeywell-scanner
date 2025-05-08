@@ -30,11 +30,11 @@
 	"licenseFilename": "LICENSE",
 	"readmeFilename": "README.md",
 	"peerDependencies": {
-		"react": "18.*",
+		"react": ">=18",
 		"react-native": "0.*"
 	},
 	"devDependencies": {
-		"react": "18.*",
+		"react": ">=18",
 		"react-native": "0.*"
 	}
 }
